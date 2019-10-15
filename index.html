@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <script>
+    function handleReplaceAll() {
+      var sentence = 'This is test example and it Is easy to learn.';
+      var output = sentence.replace(/is/g, '-'); // Output: Th- - test example and it Is easy to learn.
+      document.getElementById("demo").innerHTML = output;
+    }
+
+    function handleReplaceAllCI() {
+      var sentence = 'This is test example and it Is easy to learn.';
+      var output = sentence.replace(/is/gi, '-'); // Output: Th- - test example and it - easy to learn.
+      document.getElementById("demo1").innerHTML = output;
+    }
+
+    function handleReplaceAllSplitJoin() {
+      var sentence = 'This is test example and it Is easy to learn.';
+      var output = sentence.split('is').join('-'); // Output: Th- - test example and it Is easy to learn.
+      document.getElementById("demo2").innerHTML = output;
+    }
+  </script>
+</head>
+
+<body>
+  <h3>Replace all occurrences of a string in JavaScript - Clue Mediator</h3>
+  <p><b>Sentence: </b>This is test example and it Is easy to learn.</p>
+  <p><b>Output: </b><span id="demo"></span></p>
+  <button style="margin-bottom:20px;" type="button" onclick="handleReplaceAll()">Replace All</button>
+
+  <h3>Javascript case insensitive replace all</h3>
+  <p><b>Sentence: </b>This is test example and it Is easy to learn.</p>
+  <p><b>Output: </b><span id="demo1"></span></p>
+  <button style="margin-bottom:20px;" type="button" onclick="handleReplaceAllCI()">Replace All</button>
+
+  <h3>Javascript split and join method</h3>
+  <p><b>Sentence: </b>This is test example and it Is easy to learn.</p>
+  <p><b>Output: </b><span id="demo2"></span></p>
+  <button style="margin-bottom:20px;" type="button" onclick="handleReplaceAllSplitJoin()">Replace All</button>
+</body>
+
+</html>
